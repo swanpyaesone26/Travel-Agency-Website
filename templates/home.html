@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Travel Agency | Explore the World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        body {
+            background: url('https://www.financialexpress.com/wp-content/uploads/2022/05/travel-n-tourism-big-NEW.jpg') no-repeat center center/cover; /* Replace with your chosen high-res travel image */
+        }
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay on image */
+            position: relative;
+        }
+        header h1 {
+            font-size: 64px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: fadeInDown 1.5s ease;
+        }
+        header p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.5s ease;
+        }
+        .cta {
+            padding: 15px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white;
+            background: #FF5733;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            animation: fadeIn 2s ease;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .cta:hover {
+            background: #C70039;
+            transform: scale(1.1);
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Login button style */
+        .login-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #2980B9;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .login-btn:hover {
+            background-color: #1C5982;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: -50px;
+            gap: 50px;
+            padding: 60px 0;
+            background: #f0f0f0;
+        }
+        .icon-box {
+            width: 250px;
+            height: 250px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s, background-color 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .icon-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .icon-box img {
+            width: 80%;
+            height: auto;
+            max-height: 150px; /* Ensure image does not exceed box height */
+            object-fit: cover; /* Ensures the image covers the box without distortion */
+            transition: filter 0.3s;
+            margin-bottom: 10px;
+        }
+        .icon-box:hover {
+            transform: translateY(-20px);
+            background-color: #2980B9;
+            color: white;
+        }
+        .icon-box:hover img {
+            filter: brightness(0.8) saturate(1.2); /* Adjust brightness and saturation */
+        }
+        footer {
+            background-color: #FF5733;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            margin-top: 50px;
+        }
+        footer p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+
+    <h1>A1 Travel Agency</h1>
+    <p>Explore the World, One Destination at a Time</p>
+    <a href="booking/" class="cta">Start Your Journey</a>
+</header>
+
+<div class="icon-container">
+    <!-- About Us Icon -->
+    <div class="icon-box">
+        <a href="about/">
+            <img src="https://st.depositphotos.com/1038076/3309/i/450/depositphotos_33095095-stock-photo-about-us.jpg" alt="About Us Icon">
+            <p>About Us</p>
+        </a>
+    </div>
+
+    <!-- Contact Us Icon -->
+    <div class="icon-box">
+        <a href="contact/">
+            <img src="https://png.pngtree.com/png-vector/20191027/ourmid/pngtree-customer-support-operators-icon-simple-style-png-image_1873713.jpg" alt="Contact Us Icon">
+            <p>Contact Us</p>
+        </a>
+    </div>
+
+    <!-- Services Icon -->
+    <div class="icon-box">
+        <a href="services/">
+            <img src="https://png.pngtree.com/png-vector/20230416/ourmid/pngtree-our-service-label-vector-png-image_6709314.png" alt="Services Icon">
+            <p>Services</p>
+        </a>
+    </div>
+
+    <!-- Booking Icon -->
+    <div class="icon-box">
+        <a href="booking/">
+            <img src="https://www.guesty.com/wp-content/uploads/2023/09/Circle-Marketing-team-300x300.png" alt="Booking Icon">
+            <p>Booking</p>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 A1 Travel Agency | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

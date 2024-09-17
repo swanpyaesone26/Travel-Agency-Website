@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - A1 Travel Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Light sky blue background */
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #00bcd4; /* Sky blue header */
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            font-size: 1.2em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .contact-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .contact-form h2 {
+            margin-top: 0;
+            color: #00bcd4; /* Sky blue heading */
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #00bcd4; /* Sky blue button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .contact-form button:hover {
+            background-color: #0097a7; /* Slightly darker blue on hover */
+        }
+        .contact-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .contact-info h2 {
+            color: #00bcd4; /* Sky blue heading */
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .map-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-media {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #00bcd4; /* Sky blue social media links */
+        }
+        .social-media a:hover {
+            color: #0097a7; /* Slightly darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Contact Us</h1>
+        <p>We’d Love to Hear from You!</p>
+    </div>
+    <div class="container">
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p><strong>Phone:</strong> +95 1 1234567</p>
+            <p><strong>Email:</strong> a1travelagencyinfo@gmail.com</p>
+            <p><strong>Address:</strong> Khaing Shwe Wah street, Hlaing Township, Yangon, Myanmar</p>
+            <p><strong>Business Hours:</strong> Mon-Fri, 9 AM - 5 PM</p>
+        </div>
+        <div class="map-container">
+            <h2>Find Us Here</h2>
+            <!-- Replace with your Google Map embed code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.467238348007!2d-122.073453484681!3d37.38605177983117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbcfc1b7d9ab5%3A0xd6c49040c4e9fd!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614194866297!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <a href=" " target="_blank">Facebook</a>
+            <a href=" " target="_blank">Twitter</a>
+            <a href=" " target="_blank">Instagram</a>
+        </div>
+    </div>
+</body>
+</html>
